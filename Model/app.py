@@ -123,7 +123,7 @@ hr {{ border:none !important; border-top:1px solid rgba(255,255,255,0.07) !impor
 # ─────────────────────────────────────────
 @st.cache_data
 def load_dataset():
-    df = pd.read_csv("Dataset.csv")
+    df = pd.read_csv("Model/Dataset.csv")
     df["Date"]   = pd.to_datetime(df["Date"], dayfirst=True, errors="coerce")
     df["Year"]   = df["Date"].dt.year.astype("Int64")
     # Derive actual match result from goals
